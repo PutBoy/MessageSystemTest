@@ -39,7 +39,7 @@ that it listeneds to, as well as an std::function of the signature corresponding
 
 ```c++
   auto handle = manager->addHandledReceiver<AwesomeThingHappened>(std::function<void (int i, const std::string& str>
-    ([&]() {std::cout << "The message: \"" << str << "\" has awesomeness level << i";});
+    ([&]() {std::cout << "The message: \"" << str << "\"" has awesomeness level << i";});
 ```  
   
 The above receiver reads the message and outputs the string and the awesomeness level. 
@@ -50,6 +50,8 @@ function in the manager:
 ```
   manager->connect();
 ```
+
+Output: "The message: "Pretty big deal." has awesomness level 1337".
 
 Not until this line will the text be output to the console window. When connect is called, all the messages are
 removed from the manager, but the receivers are left (should be obvious).
