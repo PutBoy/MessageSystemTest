@@ -3,6 +3,7 @@
 #include <functional>
 #include <stdint.h>
 #include <limits>
+#include <cassert>
 
 namespace ECS
 {
