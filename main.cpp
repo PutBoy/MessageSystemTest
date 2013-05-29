@@ -3,6 +3,7 @@
 #include <iostream>
 #include <memory>
 #include <string>
+#include "MessageManager.h"
 
 class Bar : public ECS::Message<Bar, std::string>
 {
