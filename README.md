@@ -8,13 +8,14 @@ To create a new type of message inherit from Message using CRTP and the signatur
 message can only return void. Say you have a message called AwesomeThingHappened, that is an int describing how
 awesome that particular message was, and a string describing the message itself:
 
+´´´
   class AwesomeThingHappened : public Message<AwesomeThingHappened, int, std::string>
   {
     AwesomeThingHappened(int awesomeness, const std::string& str)
       :Message(awesomeness, string)  
     {}
   }
-  
+´´´
 As you can see the constructor for the Message-class will accept the arguments specified in the template following
 Derived.
 
